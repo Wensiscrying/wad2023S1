@@ -14,8 +14,6 @@ router.use(express.urlencoded({
     extended: true
 }));
 
-
-//Events
 router.post('/api/events', function (req, res) {
     let data = req.body;
     db.addEvent(data.name,  data.description,  data.startDate,  data.startTime,  data.endDate,  data.endTime)
@@ -106,10 +104,6 @@ router.delete('/api/events/name/:value',function(req,res){
     });
 })
 
-
-
-
-//Organizers
 router.post('/api/organizers',function(req,res) {
     let data = req.body;
     db.addOrganizer(data.name,data.username,data.password,data.company)

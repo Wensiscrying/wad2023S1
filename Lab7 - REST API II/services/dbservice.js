@@ -13,8 +13,6 @@ let db = {
             throw new Error("Error connecting to Mongo DB");
         }
     },
-
-    //Events
     async addEvent(name, description, startDate, startTime, endDate, endTime) {
         try {
             await event.create({
@@ -111,11 +109,6 @@ let db = {
             throw new Error("Error deleting event");
         }
     },
-    
-
-
-
-    //Organizers
     async addOrganizer(name, username, password, company) {
         try {
             await organizer.create({
